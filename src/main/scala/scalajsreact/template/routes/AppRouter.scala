@@ -3,14 +3,9 @@ package scalajsreact.template.routes
 import scalajsreact.template.components.{Footer, TopNav}
 import scalajsreact.template.models.Menu
 import scalajsreact.template.pages.HomePage
-
-import japgolly.scalajs.react.extra.router.{
-  Resolution,
-  RouterConfigDsl,
-  RouterCtl,
-  _
-}
+import japgolly.scalajs.react.extra.router.{Resolution, RouterConfigDsl, RouterCtl, _}
 import japgolly.scalajs.react.vdom.html_<^._
+import org.scalajs.dom.html.Div
 
 object AppRouter {
 
@@ -37,14 +32,14 @@ object AppRouter {
     Menu("Items", Items(Item.Info))
   )
 
-  def layout(c: RouterCtl[AppPage], r: Resolution[AppPage]) =
+  def layout(c: RouterCtl[AppPage], r: Resolution[AppPage]): VdomTagOf[Div] =
     <.div(
       TopNav(TopNav.Props(mainMenu, r.page, c)),
       r.render(),
       Footer()
     )
 
-  val baseUrl = BaseUrl.fromWindowOrigin / "scalajs-react-template/"
+  val baseUrl = BaseUrl.fromWindowOrigin
 
   val router = Router(baseUrl, config)
 }

@@ -3,6 +3,9 @@ enablePlugins(ScalaJSBundlerPlugin)
 name := "scalajs-react-example"
 
 scalaVersion := "2.12.8"
+val scalaJSReactVersion = "1.2.0"
+val scalaCssVersion = "0.5.5"
+val reactJSVersion = "16.3.2"
 
 npmDependencies in Compile += "react" -> "16.8.6"
 npmDependencies in Compile += "react-dom" -> "16.8.6"
@@ -14,13 +17,6 @@ npmDevDependencies in Compile += "css-loader" -> "2.1.1"
 npmDevDependencies in Compile += "html-webpack-plugin" -> "3.2.0"
 npmDevDependencies in Compile += "copy-webpack-plugin" -> "5.0.2"
 npmDevDependencies in Compile += "webpack-merge" -> "4.2.1"
-
-// libraryDependencies += "me.shadaj" %%% "slinky-web" % "0.6.0"
-// libraryDependencies += "me.shadaj" %%% "slinky-hot" % "0.6.0"
-
-val scalaJSReactVersion = "1.2.0"
-val scalaCssVersion = "0.5.5"
-val reactJSVersion = "16.3.2"
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.5",
@@ -49,6 +45,8 @@ webpackBundlingMode in fastOptJS := BundlingMode.LibraryOnly()
 
 requireJsDomEnv in Test := true
 
-addCommandAlias("dev", ";fastOptJS::startWebpackDevServer;~fastOptJS")
+addCommandAlias("serve", ";fastOptJS::startWebpackDevServer;~fastOptJS")
+
+addCommandAlias("devBuild", "fastOptJS")
 
 addCommandAlias("build", "fullOptJS::webpack")

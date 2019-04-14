@@ -10,8 +10,8 @@ object GlobalStyle extends StyleSheet.Inline {
     unsafeRoot("body")(
       margin.`0`,
       padding.`0`,
-      fontSize(14.px),
-      fontFamily := "Roboto, sans-serif"
+      fontSize(14.px)//,
+      // fontFamily :=! "Roboto, sans-serif"
     )
   )
 }

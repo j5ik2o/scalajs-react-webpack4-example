@@ -7,7 +7,7 @@ import scalajsreact.template.pages.{HomePage, ItemsPage}
 
 object AppCSS {
 
-  def load = {
+  def load(): Unit = {
     GlobalRegistry.register(GlobalStyle,
                             TopNav.Style,
                             LeftNav.Style,
