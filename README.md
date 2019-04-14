@@ -6,6 +6,7 @@ React example for Scala.js with sbt-scalajs-bundler plugin
 
 - Scala 2.12.x
 - [scalajs-react](https://github.com/japgolly/scalajs-react)
+- SBT 1.2.x
 - Webpack 4.x build for [sbt-scalajs-bundler](https://github.com/scalacenter/scalajs-bundler)
 
 
