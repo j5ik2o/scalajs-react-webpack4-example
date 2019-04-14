@@ -1,6 +1,6 @@
 # scalajs-react-example
 
-React example for Scala.js with sbt-scalajs-bundler plugin
+React example for Scala.js with Webpack 4.x(sbt-scalajs-bundler)
 
 ## Features
 
