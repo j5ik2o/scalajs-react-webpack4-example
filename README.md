@@ -17,7 +17,7 @@ React example for Scala.js with sbt-scalajs-bundler plugin
 $ sbt serve
 ```
 
-access to http://localhost:8080/
+refer to http://localhost:8080/
 
 - for build
 
